@@ -21,5 +21,6 @@ public interface EmployeeRepository extends JpaRepository<EmployeeMaster, Long> 
 	  long getTotalEmployees();
 	  
 	    EmployeeMaster findByPhoneNumberAndPassword(String phoneNumber, String password);
+	    EmployeeMaster findByPhoneNumber(String phoneNumber);
 
 }

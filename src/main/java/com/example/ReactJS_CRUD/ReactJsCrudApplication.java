@@ -10,5 +10,4 @@ public class ReactJsCrudApplication {
 		SpringApplication.run(ReactJsCrudApplication.class, args);
 		//Employee CRUD UI
 	}
-
 }

@@ -26,18 +26,32 @@ public class UserService {
     @Autowired
     private JwtUtil jwtUtil;
 
-    // LOGIN
-    public UserMaster loginUser(String mobile, String password) 
-    {
-        UserMaster user = repo.findByMobilenoAndPassword(mobile, password);
-        System.out.println("USER--->"+mobile+" "+password);
-        return user; // return user if password is correct
-    } 
-    
+	    // LOGIN
+	    public UserMaster loginUser(String mobile, String password) 
+	    {
+	        UserMaster user = repo.findByMobilenoAndPassword(mobile, password);
+	        UserMaster user1 = repo.findByMobileno(mobile);
+	        System.out.println("users====>"+user1);
+	        System.out.println("USER--->"+mobile+" "+password);
+	        return user; // return user if password is correct
+	    } 
+	    
     public EmployeeMaster loginEmployee(String mobile, String password) 
     {
+    	
+    	Optional<EmployeeMaster> emps =empRepo.findById(60L);
+    	System.out.println(emps.get().getEmail());
+    	
+    
+    	System.out.println("BEFORE QUERY");
+
     	EmployeeMaster emp = empRepo.findByPhoneNumberAndPassword(mobile, password);
-        System.out.println("EMPLOYEE--->"+mobile+" "+password);
+
+    	System.out.println("AFTER QUERY");
+    	
+        EmployeeMaster emp1 = empRepo.findByPhoneNumber(mobile);
+        System.out.println("EMPLOYEEs--->"+emp1.toString());
+
         return emp; // return user if password is correct
     } 
     
