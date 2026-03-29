@@ -19,7 +19,7 @@ services:
       retries: 10
 
   springboot-app:
-    build: .
+    image: springboot-app
     container_name: springboot-app
     depends_on:
       postgres:
