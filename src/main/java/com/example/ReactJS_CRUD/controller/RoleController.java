@@ -23,6 +23,8 @@ public class RoleController {
     @Autowired
     private RoleService service;
 
+    //ahssdsdkjddkjxsAJDjdk;sfl;fd;slfd;lfsn;;
+    
     // GET ALL
     @GetMapping
     public ResponseEntity<?> getAllRoles(
