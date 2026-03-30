@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 public class ReactJsCrudApplication {
 	
-	int a,b,c;
+	int a=10,b,c;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ReactJsCrudApplication.class, args);
